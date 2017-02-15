@@ -1,0 +1,19 @@
+<ion-header>
+  <ion-navbar>
+    <ion-title>Feed</ion-title>
+  </ion-navbar>
+</ion-header>
+
+<ion-content padding>
+  <connection></connection>
+  <ion-card *ngFor="let card of posts | async">
+    <ion-card-content>
+      <ion-card-title>
+        {{card.title}}
+      </ion-card-title>
+      <p>
+        {{card.body}}
+      </p>
+    </ion-card-content>
+  </ion-card>
+</ion-content>
